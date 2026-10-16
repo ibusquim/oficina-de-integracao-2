@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aprenda lógica de programação com desafios visuais em Portugol."
+    />
+    <meta name="theme-color" content="#f4f7fb" />
+
+    <title>MoveCode | Aprenda lógica de programação</title>
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="MoveCode - página inicial">
+          <span class="brand__mark" aria-hidden="true">M</span>
+          <span class="brand__name">MoveCode</span>
+        </a>
+
+        <span class="topbar__tagline">
+          Aprenda lógica programando
+        </span>
+      </header>
+
+      <main class="page-main">
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">Sprint 1 · Protótipo educacional</p>
+
+          <h1 id="page-title">
+            Programe. Execute.
+            <span>Aprenda.</span>
+          </h1>
+
+          <p class="intro__description">
+            Escreva instruções em Portugol e conduza o personagem
+            até o objetivo usando lógica de programação.
+          </p>
+        </section>
+
+        <div class="workspace">
+          <!-- Cenário do desafio -->
+          <section class="panel scenario-panel"
+            aria-labelledby="challenge-title">
+
+            <div class="panel__heading">
+              <div>
+                <p class="section-kicker">SEU DESAFIO</p>
+                <h2 class="panel__title">Cenário</h2>
+              </div>
+
+              <span class="status-pill status-pill--ready"
+                id="status-pill">
+                Pronto
+              </span>
+            </div>
+
+            <div class="challenge-summary">
+              <div>
+                <h3 id="challenge-title">Carregando desafio...</h3>
+                <p id="challenge-description"></p>
+              </div>
+
+              <span class="dimension-badge" id="board-size"></span>
+            </div>
+
+            <div class="board-wrapper">
+              <div
+                id="game-board"
+                class="game-board"
+                role="grid"
+                aria-label="Cenário do desafio">
+              </div>
+            </div>
+
+            <div class="legend" aria-label="Legenda do cenário">
+              <span><i class="legend__player"></i> Personagem</span>
+              <span><i class="legend__obstacle"></i> Obstáculo</span>
+              <span><i class="legend__goal"></i> Objetivo</span>
+            </div>
+
+            <div
+              id="result-message"
+              class="message message--hidden"
+              role="status"
+              aria-live="polite"
+              hidden>
+            </div>
+
+            <div class="panel-footer">
+              <button
+                id="reset-button"
+                class="button button--secondary"
+                type="button">
+                Reiniciar cenário
+              </button>
+
+              <span class="panel-footer__note">
+                Execute novamente para tentar outra rota.
+              </span>
+            </div>
+          </section>
+
+          <!-- Editor Portugol -->
+          <section class="panel editor-panel"
+            aria-labelledby="editor-title">
+
+            <div class="panel__heading">
+              <div>
+                <p class="section-kicker">PROGRAMAÇÃO</p>
+                <h2 class="panel__title" id="editor-title">
+                  Editor Portugol
+                </h2>
+              </div>
+
+              <span class="language-badge">Portugol</span>
+            </div>
+
+            <div class="command-reference">
+              <h3>Comandos disponíveis</h3>
+
+              <div id="command-list" class="command-list"></div>
+            </div>
+
+            <div class="editor-section">
+              <label for="code-editor" class="field-label">
+                Seu programa
+              </label>
+
+              <div class="editor-shell">
+                <div class="editor-toolbar">
+                  <span class="editor-toolbar__dot"></span>
+                  <span class="editor-toolbar__dot"></span>
+                  <span class="editor-toolbar__dot"></span>
+                  <span class="editor-toolbar__language">
+                    Portugol simplificado
+                  </span>
+                </div>
+
+                <textarea
+                  id="code-editor"
+                  class="code-editor"
+                  rows="13"
+                  spellcheck="false"
+                  autocomplete="off"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  aria-describedby="editor-help"
+                  aria-label="Código do programa em Portugol">
+                </textarea>
+              </div>
+
+              <p id="editor-help" class="field-help">
+                Use inicio para começar e fim para encerrar o programa.
+                Escreva um comando por linha.
+              </p>
+            </div>
+
+            <div class="editor-actions">
+              <button
+                id="run-button"
+                class="button button--primary"
+                type="button">
+                Executar programa
+              </button>
+
+              <span class="keyboard-hint">
+                Dica: Ctrl + Enter para executar
+              </span>
+            </div>
+
+            <div class="execution-panel">
+              <div class="execution-panel__heading">
+                <h3>Passos da execução</h3>
+                <span class="execution-panel__label">Registro local</span>
+              </div>
+
+              <ol
+                id="execution-log"
+                class="execution-log"
+                aria-label="Registro dos comandos executados">
+              </ol>
+            </div>
+          </section>
+        </div>
+
+        <footer class="page-footer">
+          <p>MoveCode · Aprendendo lógica de programação passo a passo.</p>
+        </footer>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
