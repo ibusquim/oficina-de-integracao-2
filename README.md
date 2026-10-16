@@ -82,6 +82,21 @@ A sintaxe completa e as regras de execução serão definidas na documentação 
 
 O sistema utilizará uma arquitetura cliente-servidor, separando a interface da aplicação, a interpretação e execução dos comandos, a API e a persistência dos dados.
 
+## Execução
+
+O front-end está em [`frontend/`](frontend/README.md:1), construído com Vite e testado com Vitest.
+
+```bash
+cd frontend
+npm install
+npm run dev      # servidor de desenvolvimento
+npm run build    # compilação para produção
+npm run test     # testes automatizados
+npm run coverage # relatório de cobertura
+```
+
+O interpretador Portugol e o motor de execução ficam em `frontend/src/core/`.
+
 ## Documentação
 
 * [Requisitos](docs/requisitos.md)
