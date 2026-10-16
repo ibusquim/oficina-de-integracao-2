@@ -1,0 +1,19 @@
+{
+  "name": "movecode",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "5.0.4",
+    "vite": "8.3.4",
+    "vitest": "5.0.4"
+  }
+}
